@@ -13,6 +13,10 @@ watch(query, (newValue) => {
     emit('search', newValue)
   }, 300)
 })
+
+onUnmounted(() => {
+  clearTimeout(debounceTimer)
+})
 </script>
 
 <template>
