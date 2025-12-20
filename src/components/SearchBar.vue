@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watch , onUnmounted  } from 'vue'
+import { ref, watch, onUnmounted } from 'vue'
 
 const emit = defineEmits(['search'])
 
@@ -21,22 +21,31 @@ onUnmounted(() => {
 
 <template>
   <div class="search-bar">
-    <input
-      type="text"
-      v-model="query"
-      placeholder="Search..."
-    />
+    <input type="text" v-model="query" placeholder="Search..." />
   </div>
 </template>
 
 <style scoped>
 .search-bar {
-  width: 100%;
+  margin-bottom: 32px;
 }
 
 input {
   width: 100%;
-  padding: 10px 12px;
+  padding: 16px 18px;
   font-size: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  outline: none;
+}
+
+input::placeholder {
+  color: #888;
+}
+
+input:focus {
+  border-color: var(--text);
 }
 </style>

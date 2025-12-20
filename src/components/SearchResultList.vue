@@ -17,6 +17,8 @@ const props = defineProps({
 
 <style scoped>
 .result-list {
-  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 </style>
