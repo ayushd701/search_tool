@@ -1,6 +1,7 @@
 <script setup>
 import { ref, watch } from 'vue'
 import SearchBar from './components/SearchBar.vue'
+import SearchResultList from './components/SearchResultList.vue'
 import { searchApi } from './services/api'
 
 const searchQuery = ref('')
@@ -33,12 +34,7 @@ watch(searchQuery, async (newQuery) => {
 
     <p v-if="loading">Loading...</p>
 
-    <ul v-if="!loading && results.length">
-      <li v-for="item in results" :key="item.id">
-        <h4>{{ item.title }}</h4>
-        <p>{{ item.description }}</p>
-      </li>
-    </ul>
+    <SearchResultList v-if="!loading && results.length" :items="results" />
   </div>
 </template>
 
@@ -49,4 +45,3 @@ watch(searchQuery, async (newQuery) => {
   font-family: sans-serif;
 }
 </style>
-
