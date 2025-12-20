@@ -4,8 +4,8 @@ import { ref } from 'vue'
 const props = defineProps({
   item: {
     type: Object,
-    required: true
-  }
+    required: true,
+  },
 })
 
 const isOpen = ref(false)
