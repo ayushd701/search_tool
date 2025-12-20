@@ -1,0 +1,20 @@
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --card: #fafafa;
+  --border: #e5e5e5;
+}
+
+body.dark {
+  --bg: #0f172a;
+  --text: #e5e7eb;
+  --card: #020617;
+  --border: #1e293b;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
