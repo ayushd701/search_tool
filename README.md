@@ -68,5 +68,6 @@ For larger applications:
 ## ▶️ Run Locally
 
 ```bash
+gh repo clone ayushd701/search_tool
 npm install
 npm run dev
